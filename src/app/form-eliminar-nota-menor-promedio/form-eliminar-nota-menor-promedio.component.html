@@ -1,1 +1,42 @@
-<p>form-eliminar-nota-menor-promedio works!</p>
+
+<div class="card">
+    <div class="card-header">
+      Formulario Promedio Notas
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label for="txtnota1" class="form-label">Ingrese primera nota:</label>
+            <input type="number" class="form-control" 
+            [(ngModel)]="nota.nota1"
+            id="txtnota1" placeholder="Ingrese primera nota">
+        </div>
+        <div class="mb-3">
+            <label for="txtnota2" class="form-label">Ingrese segunda nota:</label>
+            <input type="number" class="form-control" 
+            [(ngModel)]="nota.nota2"
+            id="txtnota2" placeholder="Ingrese segunda nota">
+        </div>
+        <div class="mb-3">
+            <label for="txtnota3" class="form-label">Ingrese tercera nota:</label>
+            <input type="number" class="form-control" 
+            [(ngModel)]="nota.nota3"
+            id="txtnota3" placeholder="Ingrese tercera nota">
+        </div>
+        <div class="mb-3">
+            <label for="txtnota4" class="form-label">Ingrese cuarta nota:</label>
+            <input type="number" class="form-control" 
+            [(ngModel)]="nota.nota4"
+            id="txtnota4" placeholder="Ingrese cuarta nota">
+        </div>
+        <hr />
+        <button type="button" (click)="calcularPromedio()"
+        class="btn btn-primary">CALCULAR</button>
+        <div class="alert alert-primary" role="alert">
+            La nota mas baja es: {{nota.notaMasBaja}}
+        </div>
+        <div class="alert alert-primary" role="alert">
+            El promedio de las Notas: {{nota.resultado}}
+        </div>
+    </div>
+  </div>
+

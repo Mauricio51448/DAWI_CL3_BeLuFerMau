@@ -1,1 +1,15 @@
-<p>form-mostrar-pares-rango works!</p>
+<div class="card">
+  <h5 class="card-header">Calculo de numeros pares entre 20 y 10</h5>
+  <div class="card-body">
+    <!-- <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Ingrese el numero mayor</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+      <label for="numeromenor" class="form-label">Ingrese el numero menor</label>
+      <input type="email" class="form-control" id="numeromenor" placeholder="40">
+    </div> -->
+    <button (click)='calcularNumerosPares()' class="btn btn-success">Calcular</button>
+    <p class="card-text">{{arrayPares.toString()}}</p>
+  </div>
+</div>

@@ -1,1 +1,21 @@
-<p>Hola mundo</p>
+<div class="card">
+    <div class="card-header">
+      Formulario Costo Estacionamiento
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label for="txtHoras" class="form-label">Ingrese las horas:</label>
+            <input type="number" class="form-control" 
+            [(ngModel)]="horas"
+            id="txtHoras" placeholder="Ingrese las horas">
+        </div>
+        <div class="mb-3">
+            <label for="txtMinutos" class="form-label">Ingrese los minutos:</label>
+            <input type="number" class="form-control" 
+            [(ngModel)]="minutos"
+            id="txtMinutos" placeholder="Ingrese los minutos">
+        </div>
+        <hr />
+
+    </div>
+</div>

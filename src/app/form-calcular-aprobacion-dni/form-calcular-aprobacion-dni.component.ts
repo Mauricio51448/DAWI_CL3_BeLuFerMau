@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, model } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-form-calcular-aprobacion-dni',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './form-calcular-aprobacion-dni.component.html',
   styleUrl: './form-calcular-aprobacion-dni.component.scss'
 })
@@ -25,7 +26,7 @@ export class FormCalcularAprobacionDniComponent {
     if (age >= 18) {
       this.dniResult = { type: 'success', message: 'Aprobado para DNI Azul' };
     } else {
-      this.dniResult = { type: 'danger', message: 'Aún no puede sacar su DNI' };
+      this.dniResult = { type: 'danger', message: 'Aún no puede sacar su DNI Azul' };
     }
   }
 

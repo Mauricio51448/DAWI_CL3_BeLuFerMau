@@ -1,1 +1,25 @@
-<p>form-calcular-aprobacion-dni works!</p>
+<div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <h2>Verificación de DNI</h2>
+        <form (ngSubmit)="onSubmit()" #dniForm="ngForm">
+          <div class="form-group">
+            <label for="yearOfBirth">Año de Nacimiento</label>
+            <input type="number" class="form-control" id="yearOfBirth" name="yearOfBirth" [(ngModel)]="yearOfBirth" required pattern="^\d{4}$">
+            <div *ngIf="dniForm.controls['yearOfBirth'].hasError('required') && dniForm.controls['yearOfBirth'].touched" class="text-danger">
+                Año de nacimiento es requerido.
+              </div>
+              <div *ngIf="dniForm.controls['yearOfBirth'].hasError('pattern') && dniForm.controls['yearOfBirth'].touched" class="text-danger">
+                Formato de año incorrecto. Ejemplo: 2003, 1998, 2005, etc.
+              </div>              
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary">Verificar</button>
+        </form>
+        <div *ngIf="dniResult" class="mt-3">
+          <p *ngIf="dniResult.type === 'success'" class="alert alert-success">{{ dniResult?.message }}</p>
+          <p *ngIf="dniResult.type === 'danger'" class="alert alert-danger">{{ dniResult?.message }}</p>
+        </div>
+      </div>
+    </div>
+  </div>

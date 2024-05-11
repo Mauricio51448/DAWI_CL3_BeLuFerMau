@@ -7,6 +7,6 @@ import { FormCalcularAprobacionDniComponent } from './form-calcular-aprobacion-d
 export const routes: Routes = [
     {path: 'promedio', component: FormEliminarNotaMenorPromedioComponent},
     {path: 'pares', component: FormMostrarParesRangoComponent},
-    {path: 'estacionamiento', component: FormPrecioxhorasEstacionamientoComponent}
+    {path: 'estacionamiento', component: FormPrecioxhorasEstacionamientoComponent},
     {path: 'dni', component: FormCalcularAprobacionDniComponent}
 ];

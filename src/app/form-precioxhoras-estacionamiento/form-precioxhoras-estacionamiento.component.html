@@ -16,6 +16,9 @@
             id="txtMinutos" placeholder="Ingrese los minutos">
         </div>
         <hr />
-
+        <button type="button" (click)="calcularCosto()" class="btn btn-primary">CALCULAR</button>
+        <div class="alert alert-primary" role="alert">
+            El costo del estacionamiento es: {{costo}}
+        </div>
     </div>
 </div>

@@ -18,5 +18,6 @@ export class FormPrecioxhorasEstacionamientoComponent {
     let totalHoras = this.horas + (this.minutos > 0 ? 1 : 0);
     this.costo = totalHoras * 1.5;
   }
+
 }
 

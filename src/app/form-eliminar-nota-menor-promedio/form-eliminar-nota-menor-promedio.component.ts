@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-form-eliminar-nota-menor-promedio',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './form-eliminar-nota-menor-promedio.component.html',
   styleUrl: './form-eliminar-nota-menor-promedio.component.scss'
 })
